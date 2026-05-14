@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenDevStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main-content">
+        <header>
+            <h1>ZenDevStore</h1>
+            <p class="subtitle">Premium Roblox Map Developer</p>
+        </header>
+
+        <section class="card-section">
+            <input type="text" id="nama" placeholder="Nama Lengkap">
+            <input type="number" id="wa" placeholder="WhatsApp (628xxx)">
+            <input type="text" id="username" placeholder="Username Roblox">
+        </section>
+
+        <div class="grid">
+            <div class="item-card">
+                <h3>Hangout</h3>
+                <input type="number" id="p-hangout" placeholder="Budget">
+                <button onclick="prosesOrder('Hangout', 'p-hangout')">ORDER</button>
+            </div>
+            <div class="item-card">
+                <h3>Club/Dugem</h3>
+                <input type="number" id="p-club" placeholder="Budget">
+                <button onclick="prosesOrder('Club/Dugem', 'p-club')">ORDER</button>
+            </div>
+            <div class="item-card">
+                <h3>Mount</h3>
+                <input type="number" id="p-mount" placeholder="Budget">
+                <button onclick="prosesOrder('Mount', 'p-mount')">ORDER</button>
+            </div>
+            <div class="item-card">
+                <h3>Custom</h3>
+                <input type="number" id="p-custom" placeholder="Min 300k">
+                <textarea id="desc-custom" placeholder="Detail map..."></textarea>
+                <button onclick="prosesOrder('Custom', 'p-custom')">ORDER</button>
+            </div>
+        </div>
+
+        <div class="donation-area">
+            <button onclick="showDonasi()">Support via Donation</button>
+        </div>
+    </div>
+
+    <!-- Halaman Tunggu -->
+    <div id="waiting-page" class="container" style="display:none; text-align:center;">
+        <div class="loader"></div>
+        <h2>PESANAN TERKIRIM</h2>
+        <p>Mohon tunggu sebentar, Admin sedang meninjau pesanan kamu. Admin akan menghubungi kamu via WhatsApp segera.</p>
+        <button onclick="location.reload()" style="background:#333; margin-top:20px;">Kembali</button>
+    </div>
+
+    <!-- Modal Donasi -->
+    <div id="donasi-modal" class="modal" onclick="closeDonasi()">
+        <div class="modal-content">
+            <h3>Scan QR Code</h3>
+            <img src="https://qr code.jpeg/?size=150x150&data=DONASI" alt="QR">
+            <p>Terima kasih atas dukungannya!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
